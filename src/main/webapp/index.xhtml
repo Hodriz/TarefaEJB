@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h3>Qual é a Soma dos Numeros?</h3><br></br> 
+            <h:outputText value="#{randomNum.numA}"></h:outputText><br></br>
+            <h:outputText value="#{randomNum.numB}"></h:outputText>
+            <h2> Nome:</h2>
+            <h:inputText value="#{usuario.nome}"></h:inputText><br></br><!-- comment -->
+            <h2>Resposta</h2><h:inputText value="#{usuario.palpite}"></h:inputText><br></br><br></br>
+           
+            <h:outputText value="#{randomNum.total}"></h:outputText>
+
+            <h:commandButton value="enviar" action="#{jsfUsuario.informarUsuario()}" ></h:commandButton><br></br>
+            <h:outputLabel value="#{jsfUsuario.usuarioBean}"></h:outputLabel>
+            <h:dataTable value="#{usuario.nomes}" var="nome">
+                <h:column>
+                    <h:outputText value="#{nome}"></h:outputText>
+                </h:column>
+            </h:dataTable>
+
+        </h:form>
+    </h:body>
+</html>
+
